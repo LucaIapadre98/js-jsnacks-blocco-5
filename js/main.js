@@ -14,7 +14,7 @@ const people = [
     { name: 'Marco', age: 67 }
   ];    
 
-console.log(people.name);
+//console.log(people.name);
 
   
   // Stampa in console tutti i nomi
@@ -30,7 +30,7 @@ console.log(people.name);
         numbers[i] = numbers[i] + 1;
     }
 
-console.log(numbers);
+//console.log(numbers);
 
 
 // #SNACK4 //
@@ -39,13 +39,13 @@ const posts = [
     { author: 'Luca', date: '30/6/2021', content: 'lorem ipsum...' },
     { author: 'Fabrizio', date: '12/9/2020', content: 'lorem ipsum...' },
     { author: 'Enrico', date: '09/12/2021', content: 'lorem ipsum...' },
-  ]
+];
   
   // Crea un nuovo array coi nomi di tutti gli autori
   // Risultato: ['Marco', 'Luca', 'Fabrizio', 'Enrico']
 
   for (let i = 0; i < posts.length; i++){
-    console.log(posts[i].author);
+    //console.log(posts[i].author);
 
   }
 
@@ -64,9 +64,31 @@ function isEven() {
         }
     }
 }
-console.log(isEven());
+//console.log(isEven());
+
+// #SNACK6 //
+const zucchine = [
+    { type: 'Napoletana', weight: 10, length: 4 },
+    { type: 'Trombetta', weight: 13, length: 16 },
+    { type: 'Napoletana', weight: 4, length: 23 },
+    { type: 'Trombetta', weight: 11, length: 6 },
+    { type: 'Napoletana', weight: 2, length: 17 },
+    { type: 'Romana', weight: 5, length: 10 },
+    { type: 'Romana', weight: 7, length: 9 },
+    { type: 'Trombetta', weight: 3, length: 8 },
+    { type: 'Calabrese', weight: 6, length: 27 },
+    { type: 'Calabrese', weight: 14, length: 4 },
+];
+  
+  // A partire dall'array fornito, crea due array. Uno con le zucchine più lunghe di almeno 15cm. L'altro con le restanti.
 
 
+
+const zucchineLunghe = zucchine.filter ((zucchine, length) => zucchine.length >= "15");
+console.table(zucchineLunghe);
+
+const zucchineCorte = zucchine.filter ((zucchine, length) => zucchine.length <= "15");
+console.table(zucchineCorte);
 
 
 
