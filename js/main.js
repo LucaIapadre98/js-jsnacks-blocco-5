@@ -1,10 +1,10 @@
 // #SNACK 1 //
-//const names = ['Edoardo', 'Simone', 'Francesco'];
+const names = ['Edoardo', 'Simone', 'Francesco'];
 
 // Stampa in console tutti i nomi
 // Risultato: 'Edoardo', 'Simone', 'Francesco'
 
-//console.log(`${names}`);
+console.log(`${names}`);
 
 
 // #SNACK 2 //
@@ -14,11 +14,8 @@ const people = [
     { name: 'Marco', age: 67 }
   ];    
   people.forEach(person => {
-    console.log(person.name);
-    
+    console.log(person.name); 
   });
-
-
   
   // Stampa in console tutti i nomi
   // Risultato: 'Paolo', 'Giulia', 'Marco'
@@ -58,17 +55,23 @@ const posts = [
 // Crea un array a partire dall'array nums, che abbia solo i numeri pari
 // Risultato: [2, 8, 4, 12]
 
-let evenNums = isEven;
-function isEven() {
-    for (let i = 0; i < nums.length; i++) {
-        currentNumber = nums[i];
-        if (nums[i] % 2 == 0){
-            console.log(nums[i]);
-        }
-    }
-}
+//let evenNums = isEven;
+//function isEven() {
+//    for (let i = 0; i < nums.length; i++) {
+//        currentNumber = nums[i];
+//        if (nums[i] % 2 == 0){
+//            console.log(nums[i]);
+//        }
+//    }
+   
+//};
 //console.log(isEven());
+const everNums = nums.filter((num) => { 
+  return num % 2 === 0
+});
+console.log(everNums);
 
+ 
 // #SNACK6 //
 const zucchine = [
     { type: 'Napoletana', weight: 10, length: 4 },
@@ -83,9 +86,7 @@ const zucchine = [
     { type: 'Calabrese', weight: 14, length: 4 },
 ];
   
-  // A partire dall'array fornito, crea due array. Uno con le zucchine più lunghe di almeno 15cm. L'altro con le restanti.
-
-
+ // A partire dall'array fornito, crea due array. Uno con le zucchine più lunghe di almeno 15cm. L'altro con le restanti.
 
 const zucchineLunghe = zucchine.filter ((zucchine, length) => zucchine.length >= "15");
 console.table(zucchineLunghe);
